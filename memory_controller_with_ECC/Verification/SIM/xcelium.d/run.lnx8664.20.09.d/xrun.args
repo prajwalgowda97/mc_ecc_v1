@@ -1,0 +1,12 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-clean
+-access
++rwc
+-f
+compile_list.f
+-uvmhome
+CDNS-1.1d
++UVM_TESTNAME=mc_mem_initial_test

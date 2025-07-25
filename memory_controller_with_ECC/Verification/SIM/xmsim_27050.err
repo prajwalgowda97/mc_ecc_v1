@@ -1,0 +1,86 @@
+csi-xmsim - CSI: Command line:
+xmsim
+    -f /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/SIM/xcelium.d/run.lnx8664.20.09.d/compute-srv3.eda.atme.in_27050/xmsim.args
+        -INPUT @source /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+        -uvmhome /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
+        -sv_lib /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so
+        +UVM_TESTNAME=mc_reset_test
+        -MESSAGES
+        -RUN
+        -SV_LIB /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmdpi.so
+        +EMGRLOG xrun.log
+        -XLSTIME 1753268480
+        -XLKEEP
+        -XLMODE ./xcelium.d/run.lnx8664.20.09.d
+        -RUNMODE
+        -CDSLIB ./xcelium.d/run.lnx8664.20.09.d/cds.lib
+        -HDLVAR ./xcelium.d/run.lnx8664.20.09.d/hdl.var
+        -XLNAME xrun
+        -XLVERSION TOOL:	xrun(64)	20.09-s009
+        -XLNAME ./xcelium.d/run.lnx8664.20.09.d/compute-srv3.eda.atme.in_27050
+    -CHECK_VERSION TOOL:	xrun(64)	20.09-s009
+    -LOG_FD 4
+    -LOG_FD_NAME xrun.log
+    -cmdnopsim
+    -runlock /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/SIM/xcelium.d/run.lnx8664.20.09.d/.xmlib.lock
+    -runscratch /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/SIM/xcelium.d/run.lnx8664.20.09.d/compute-srv3.eda.atme.in_27050
+
+csi-xmsim - CSI: *F,INTERR: INTERNAL EXCEPTION
+Observed simulation time : 312774485 NS + 3
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	xmsim(64)	20.09-s009
+  HOSTNAME: compute-srv3.eda.atme.in
+  OPERATING SYSTEM: Linux 3.10.0-1160.118.1.el7.x86_64 #1 SMP Wed Apr 24 16:01:50 UTC 2024 x86_64
+  MESSAGE: sv_seghandler - trapno -1 addr(0x8)
+-----------------------------------------------------------------
+
+csi-xmsim - CSI: Cadence Support Investigation, recording details
+External Code in function: <unavailable> offset -65512
+External Code in function: <unavailable> offset -65536
+Simulator Snap Shot: gd (SSS_GD) in snapshot worklib.rggen_apb_bridge:v (SSS)
+External Code in function: <unavailable> offset -65391
+External Code in function: <unavailable> offset -65534
+External Code in function: <unavailable> offset -65046
+Simulator Snap Shot: dynlib (SSS_DYNLIB) in snapshot worklib.rggen_apb_bridge:v (SSS)
+Simulator Snap Shot: dynpatch (SSS_DYNPATCH) in snapshot worklib.rggen_apb_bridge:v (SSS)
+Simulator Snap Shot: root (SSS_ROOT) in snapshot worklib.rggen_apb_bridge:v (SSS)
+Verilog Syntax Tree: dpifunction declaration (VST_D_DPIFUNCTION) in verilog_package worklib.uvm_pkg:sv (VST)
+	File: /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/dpi/uvm_hdl.svh, line 59, position 55
+	Scope: uvm_pkg::uvm_hdl_check_path
+	Decompile: unable to decompile type 801
+	Source  :   import "DPI-C" context function int uvm_hdl_check_path(string path);
+	Position:                                                        ^
+Intermediate File: string (IF_STRING) in verilog_package worklib.uvm_pkg:sv (VST)
+	Decompile: uvm_hdl_check_path
+Verilog Syntax Tree: function call expression (VST_E_FUNCTION_CALL) in verilog_package worklib.uvm_pkg:sv (SIG) <0x7a1540c5>
+	File: /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh, line 167, position 37
+	Scope: uvm_pkg::uvm_reg_mem_hdl_paths_seq::check_mem.unmblk1
+	Decompile: uvm_hdl_check_path()
+	Source  :                 if(!uvm_hdl_check_path(p_))
+	Position:                                      ^
+Code Item: stream (COD_STREAM)
+Intermediate File: data block (IF_BLK) in snapshot worklib.rggen_apb_bridge:v (SSS)
+Simulator Snap Shot: cpstate (SSS_CPSTATE) in snapshot worklib.rggen_apb_bridge:v (SSS)
+Verilog Syntax Tree: overlay table (VST_OVERLAY_TABLE) in verilog_package worklib.uvm_pkg:sv (SIG) <0x7a1540c5>
+	Decompile: uvm_pkg::uvm_reg_mem_hdl_paths_seq
+Verilog Syntax Tree: dpifunction declaration (VST_D_DPIFUNCTION) in verilog_package worklib.uvm_pkg:sv (VST)
+	File: /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/dpi/uvm_hdl.svh, line 121, position 49
+	Scope: uvm_pkg::uvm_hdl_read
+	Decompile: unable to decompile type 801
+	Source  :   import "DPI-C" context function int uvm_hdl_read(string path, output uvm_hdl_data_t value);
+	Position:                                                  ^
+Intermediate File: root (IF_ROOT) in verilog_package worklib.uvm_pkg:sv (VST)
+Verilog Syntax Tree: function call expression (VST_E_FUNCTION_CALL) in verilog_package worklib.uvm_pkg:sv (VST)
+	File: /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg.svh, line 2720, position 28
+	Scope: uvm_pkg::uvm_reg::backdoor_read_func.unmblk1
+	Decompile: uvm_hdl_read()
+	Source  :            ok &= uvm_hdl_read(hdl_concat.slices[j].path,val);
+	Position:                             ^
+Verilog Syntax Tree: overlay table (VST_OVERLAY_TABLE) in verilog_package worklib.uvm_pkg:sv (SIG) <0x68c31baa>
+	Decompile: uvm_pkg::uvm_reg
+External Code in function: <unavailable> offset -65504
+csi-xmsim - CSI: investigation complete took 0.261 secs, send this file to Cadence Support
