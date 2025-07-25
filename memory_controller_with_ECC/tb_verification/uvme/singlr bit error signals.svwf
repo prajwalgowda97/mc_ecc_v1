@@ -1,0 +1,107 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.zmc_top_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.zmc_top_rstn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.zmc_top_sw_rst}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.zmc_top_mem_init}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.MEM_init_ACK}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.awvalid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.awready}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.awlen[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.awaddr[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.awburst[1:0]}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.wvalid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.wready}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.wstrb[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.wdata[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.wlast}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.bvalid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.bready}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.bresp[1:0]}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.arvalid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.arready}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.arlen[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.arburst[1:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.araddr[31:0]}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.rvalid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.rready}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.rdata[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.rlast}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.o_ECC_STAUS_REG[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.ECC_interrupt}]}
+	} ]]
+
+waveform xview limits 163820ns 164398ns

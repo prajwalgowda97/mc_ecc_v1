@@ -1,0 +1,57 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.i_ECC_STAUS_REG_clear}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.i_paddr[9:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.i_penable}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.i_psel}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.i_pwdata[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.i_pwrite}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.o_prdata[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.zmc_top_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.apb_vif.zmc_top_rstn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.i_paddr[9:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.i_pwrite}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.i_paddr[9:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.CSR_registers_inst.o_ECC_ONOFF_REG_ECC_ONOFF_REG[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.CSR_registers_inst.o_ECC_EN_IRQ_REG_ECC_EN_IRQ_REG[31:0]}]}
+	} ]]
+
+waveform xview limits 26ns 81ns

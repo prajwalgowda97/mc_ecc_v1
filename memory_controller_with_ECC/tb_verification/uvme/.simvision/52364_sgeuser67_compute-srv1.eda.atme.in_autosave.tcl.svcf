@@ -1,0 +1,157 @@
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set plugin-enable-groupscope 0
+preferences set sb-callstack-in-window 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+
+#
+# Databases
+#
+database require wave -search {
+	./wave.shm/wave.trn
+	/home/sgeuser67/vidya/project/memory_controller_with_ECC/tb_verification/uvme/wave.shm/wave.trn
+}
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1366x665+-1+27}] != ""} {
+    window geometry "Waveform 1" 1366x665+-1+27
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar select designbrowser
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	wave::zmc_top.dut.zmc_top_clk
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.zmc_top_rstn
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.i_penable
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.i_psel
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.i_pstrb[3:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.i_pwdata[31:0]}
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.i_pwrite
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.i_paddr[9:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.mem_ctrl_inst.CSR_registers_inst.o_ECC_ONOFF_REG_ECC_ONOFF_REG[31:0]}
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.zmc_top_mem_init
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.awvalid
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.awready
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.awaddr[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.awburst[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.awlen[3:0]}
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.wvalid
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.wready
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.wdata[31:0]}
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.wlast
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.bvalid
+	} ]
+set id [waveform add -signals  {
+	wave::zmc_top.dut.bready
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.bresp[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.RAM_wr_data_w[38:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::zmc_top.dut.RAM_wr_addr_w[13:0]}
+	} ]
+
+waveform xview limits 0 213ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 600x250+0+0
+
+#
+# Layout selection
+#

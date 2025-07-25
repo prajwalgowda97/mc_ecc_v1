@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<refinement-file-root>
+  <information comment-version="1" creation-time="Mon 17 Feb 2025 19:16:39 IST" creator="sgeuser33" csCheck="false" modified-by="sgeuser33" modify-time="Thu 20 Feb 2025 16:39:17 IST" save-ref-method="seq" tool-version="Cadence Verisium Manager22.09" rules-signature-c="c126a174ea51b6c4bcb622cc8c0e243">
+    <ucm-files>
+      <ucm-file domain="icc" modelCheckSum="2143004526" path="/home/sgeuser33/vidya/project/memory_controller_with_ECC/tb_verification/SIM/cov_work/scope/cov_merged_output/icc_7fbba76e_3ccab29d.ucm"></ucm-file>
+    </ucm-files>
+    <ccf-files>
+      <ccf-file content="set_covergroup -new_instance_reporting;set_covergroup -per_instance_default_one;set_implicit_block_scoring -off;set_assign_scoring;set_expr_scoring -all;select_functional;" path="/home/sgeuser33/vidya/project/memory_controller_with_ECC/tb_verification/SIM/cov_files/cov_cmd.cf"></ccf-file>
+    </ccf-files>
+  </information>
+  <rules></rules>
+  <cache-map></cache-map>
+</refinement-file-root>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<refinement-file-root>
+  <information comment-version="1" creation-time="Thu 20 Feb 2025 16:48:31 IST" creator="sgeuser33" csCheck="false" modified-by="sgeuser33" modify-time="Fri 07 Mar 2025 10:56:12 IST" save-ref-method="seq" tool-version="Cadence vManager20.09" rules-signature-c="8268a488c63a3fb3f97d353419148b7d">
+    <ucm-files>
+      <ucm-file domain="icc" modelCheckSum="2143004526" path="/home/sgeuser33/vidya/project/memory_controller_with_ECC/tb_verification/SIM/cov_work/scope/cov_merged_output/icc_7fbba76e_1b2f6aa0.ucm"></ucm-file>
+    </ucm-files>
+    <ccf-files>
+      <ccf-file content="set_covergroup -new_instance_reporting;set_covergroup -per_instance_default_one;set_implicit_block_scoring -off;set_assign_scoring;set_expr_scoring -all;select_functional;" path="/home/sgeuser33/vidya/project/memory_controller_with_ECC/tb_verification/SIM/cov_files/cov_cmd.cf"></ccf-file>
+    </ccf-files>
+  </information>
+  <rules>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/axi4_slave_inst/addr_n_r" entityType="toggle" excTime="1741323783" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/axi4_slave_inst/awlen_reg" entityType="toggle" excTime="1741323944" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/axi4_slave_inst/rd_addr_w" entityType="toggle" excTime="1741324100" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/axi4_slave_inst/rd_addr_w1" entityType="toggle" excTime="1741324105" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/axi4_slave_inst/addr_n_w" entityType="toggle" excTime="1741324220" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/axi4_slave_inst/arlen_reg" entityType="toggle" excTime="1741324224" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/mem_ctrl_inst/wr_addr_valid" entityType="toggle" excTime="1741324791" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/mem_ctrl_inst/rd_addr_valid" entityType="toggle" excTime="1741324805" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="inst" domain="icc" entityName="zmc_axi4_top/mem_ctrl_inst/ECC_decoding_inst/rd_data_w2" entityType="toggle" excTime="1741325065" name="exclude" reviewer="unknown" user="0" vscope="default"></rule>
+  </rules>
+  <cache-map>
+    <cache-entry key="0" value="sgeuser33"></cache-entry>
+  </cache-map>
+</refinement-file-root>

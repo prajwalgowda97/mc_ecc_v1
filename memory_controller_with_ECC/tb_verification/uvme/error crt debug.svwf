@@ -1,0 +1,116 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.data_valid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.rd_addr_o[13:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.rd_data_o[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.ECC_decoding_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.rd_en_o}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.ECC_decoding_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.rd_en_i}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.MEM_ctrl_rd_en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.dual_port_ram_inst.RAM_rd_data[38:0]}]}
+	} ]]
+waveform format $id -color #9900ff -namecolor #ff9900
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.CSR_registers_inst.o_ECC_STAUS_REG_ECC_STATUS[31:0]}]}
+	} ]]
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.CSR_registers_inst.o_ECC_EN_IRQ_REG_ECC_EN_IRQ_REG[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.CSR_registers_inst.o_ECC_ONOFF_REG_ECC_ONOFF_REG[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.CSR_registers_inst.o_ECC_STAUS_REG_ECC_STATUS[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.DATA_WIDTH}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.ECC_en[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.rd_en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.ECC_en[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.ECC_interrupt}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.ECC_irq_en[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.data_valid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.error_type[31:0]}]}
+	} ]]
+waveform format $id -color #0000ff
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.i_paddr[9:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.i_penable}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.i_psel}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.i_pstrb[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.i_pwrite}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.parity_rd_in[6:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.rd_data_i[38:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.rd_data_o[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.err_det_corr_inst.rd_en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.rd_data_i[38:0]}]}
+	} ]]
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.dut.mem_ctrl_inst.ECC_decoding_inst.rd_addr_i[13:0]}]}
+	} ]]
+
+waveform xview limits 164179ns 164329ns

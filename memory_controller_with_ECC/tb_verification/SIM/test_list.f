@@ -1,0 +1,16 @@
+random_wr_rd_test 40
+zmc_reset_test 40
+mem_initialisation_test 40
+parity_generator_test  40
+ECC_enable_test  40
+ECC_disable_test  40
+single_wr_rd_tx_test  40
+fixed_burst_wr_rd_tx_test  40
+incremental_burst_wr_rd_tx_test  40
+wrap_burst_wr_rd_tx_test  40
+interrupt_enable_test  40
+interrupt_disable_test  40
+single_bit_error_injection_test 100
+double_bit_error_injection_test  100
+random_wr_test 40
+reset_zero_test 40

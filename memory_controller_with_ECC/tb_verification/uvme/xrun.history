@@ -1,0 +1,8 @@
+s1(23Jul2025:15:28:14):  xrun -access +rwc -f compile.f -uvmhome CDNS-1.1d +UVM_TESTNAME=reset_zero_test 
+s2(23Jul2025:15:31:24):  xrun -access +rwc -f compile.f -uvmhome CDNS-1.1d +UVM_TESTNAME=reset_zero_test 
+s3(23Jul2025:16:23:48):  xrun -access +rwc -f compile.f -uvmhome CDNS-1.1d +UVM_TESTNAME=zmc_reset_test 
+s4(23Jul2025:16:24:54):  xrun -access +rwc -f compile.f -uvmhome CDNS-1.1d +UVM_TESTNAME=random_wr_rd_test 
+s5(23Jul2025:16:25:41):  xrun -access +rwc -f compile.f -uvmhome CDNS-1.1d +UVM_TESTNAME=interrupt_enable_test 
+s6(25Jul2025:14:35:33):  xrun -clear -access +rwc -f compile.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mem_initialisation_test 
+s7(25Jul2025:14:36:51):  xrun -clear -access +rwc -f compile.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mem_initialisation_test 
+s8(25Jul2025:14:37:25):  xrun -access +rwc -f compile.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mem_initialisation_test 

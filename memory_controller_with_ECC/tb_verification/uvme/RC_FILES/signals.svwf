@@ -1,0 +1,72 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Conditions
+#
+set expression {zmc_top.vif.awburst[1:0]}
+if {[catch {condition new -name  {wburst[1:0]} -expr $expression}] != ""} {
+    condition set -using {wburst[1:0]} -expr $expression
+}
+set expression zmc_top.vif.zmc_top_rstn
+if {[catch {condition new -name  zmc_tozmc_top_rstnp_rstn -expr $expression}] != ""} {
+    condition set -using zmc_tozmc_top_rstnp_rstn -expr $expression
+}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.zmc_top_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.zmc_top_rstn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.awvalid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.awready}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.awaddr[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.awburst[1:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.awlen[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.wvalid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.wready}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.wdata[31:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.wstrb[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.wlast}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.bvalid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.bready}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {zmc_top.vif.bresp[1:0]}]}
+	} ]]
+
+waveform xview limits 0 1955ns
