@@ -54,6 +54,10 @@
 /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/ral_sequence/mc_ral_ecc_disable_sequence.sv
 ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv
 /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv
+./../UVME/sequences/ral_sequence/mc_ral_random_wr_sequence.sv
+/home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/ral_sequence/mc_ral_random_wr_sequence.sv
+./../UVME/sequences/ral_sequence/mc_ral_random_wr_rd_sequence.sv
+/home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/ral_sequence/mc_ral_random_wr_rd_sequence.sv
 ./../UVME/sequences/axi_sequence/mc_base_sequence.sv
 /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/axi_sequence/mc_base_sequence.sv
 ./../UVME/sequences/axi_sequence/mc_reset_sequence.sv
@@ -66,6 +70,10 @@
 /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/axi_sequence/mc_ecc_disable_sequence.sv
 ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv
 /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv
+./../UVME/sequences/axi_sequence/mc_random_wr_sequence.sv
+/home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/axi_sequence/mc_random_wr_sequence.sv
+./../UVME/sequences/axi_sequence/mc_random_wr_rd_sequence.sv
+/home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/sequences/axi_sequence/mc_random_wr_rd_sequence.sv
 ./../UVME/tests/mc_base_test.sv
 /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/tests/mc_base_test.sv
 ./../UVME/tests/mc_reset_test.sv
@@ -78,3 +86,7 @@
 /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/tests/mc_ecc_disable_test.sv
 ./../UVME/tests/mc_ecc_enable_test.sv
 /home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/tests/mc_ecc_enable_test.sv
+./../UVME/tests/mc_random_wr_test.sv
+/home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/tests/mc_random_wr_test.sv
+./../UVME/tests/mc_random_wr_rd_test.sv
+/home/sgeuser33/Prajwal/memory_controller_with_ECC/Verification/UVME/tests/mc_random_wr_rd_test.sv

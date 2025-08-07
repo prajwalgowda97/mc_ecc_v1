@@ -1,5 +1,5 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Aug 07, 2025 at 12:15:44 IST
+TOOL:	xrun(64)	20.09-s009: Started on Aug 07, 2025 at 18:31:53 IST
 xrun
 	-access +rwc
 	-f compile_list.f
@@ -40,8 +40,8 @@ xrun
 	-uvmhome CDNS-1.1d
 	+UVM_TESTNAME=mc_ecc_enable_test
 Recompiling... reason: file '../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv' is newer than expected.
-	expected: Thu Aug  7 12:03:15 2025
-	actual:   Thu Aug  7 12:15:11 2025
+	expected: Thu Aug  7 18:31:14 2025
+	actual:   Thu Aug  7 18:31:52 2025
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
 file: ./../UVME/uvm_pkg/mc_uvm_pkg.sv
 package mc_uvm_pkg;
@@ -85,27 +85,39 @@ xmelab: *W,CONOTR (../UVME/agents/apb_agent/mc_apb_driver.sv,51|149): A clocking
 xmelab: *W,CONOTR (../UVME/agents/apb_agent/mc_apb_driver.sv,51|149): A clocking output is not a legal rvalue [IEEE STD 1800-2009].
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.uvm_pkg:sv <0x2035bba0>
+		worklib.uvm_pkg:sv <0x0107d8c1>
 			streams:  21, words: 18143
-		worklib.uvm_pkg:sv <0x0d0a69a2>
+		worklib.uvm_pkg:sv <0x16251324>
 			streams:  23, words: 26124
-		worklib.uvm_pkg:sv <0x7c74d549>
+		worklib.uvm_pkg:sv <0x5f802cc0>
 			streams:  21, words: 18143
-		worklib.uvm_pkg:sv <0x55ca6184>
+		worklib.uvm_pkg:sv <0x419cd3de>
 			streams:  23, words: 32445
-		worklib.uvm_pkg:sv <0x68c22ff1>
+		worklib.uvm_pkg:sv <0x6b146b49>
 			streams:  21, words: 21971
-		worklib.uvm_pkg:sv <0x5d709ad3>
+		worklib.uvm_pkg:sv <0x6edd5097>
 			streams:  23, words: 41390
-		worklib.uvm_pkg:sv <0x50442a7b>
+		worklib.uvm_pkg:sv <0x00270199>
 			streams:  21, words: 24903
-		worklib.uvm_pkg:sv <0x4b0d9c4e>
+		worklib.uvm_pkg:sv <0x580d3116>
 			streams:  23, words: 41473
 		worklib.uvm_pkg:sv <0x081e0626>
 			streams:  23, words: 29407
-		worklib.uvm_pkg:sv <0x599aa44c>
+		worklib.uvm_pkg:sv <0x06d2d65d>
+			streams:  21, words: 21475
+		worklib.uvm_pkg:sv <0x2ba83e84>
+			streams:  23, words: 50524
+		worklib.uvm_pkg:sv <0x12f8806b>
+			streams:  23, words: 30607
+		worklib.uvm_pkg:sv <0x3a45718a>
 			streams:  21, words: 20631
-		worklib.mc_uvm_pkg:sv <0x29aaa45a>
+		worklib.uvm_pkg:sv <0x110b4b93>
+			streams:  23, words: 43072
+		worklib.uvm_pkg:sv <0x2034067c>
+			streams:  23, words: 30607
+		worklib.uvm_pkg:sv <0x57fb8c1e>
+			streams:  21, words: 21475
+		worklib.mc_uvm_pkg:sv <0x617dc6cd>
 			streams:  22, words: 20717
 		worklib.uvm_pkg:sv <0x6b69c4c0>
 			streams:  52, words: 77922
@@ -125,9 +137,9 @@ xmelab: *W,CONOTR (../UVME/agents/apb_agent/mc_apb_driver.sv,51|149): A clocking
 			streams:  24, words: 31601
 		worklib.uvm_pkg:sv <0x6677f9c7>
 			streams:  22, words: 43427
-		worklib.uvm_pkg:sv <0x1050c59a>
-			streams:  23, words: 43015
-		worklib.uvm_pkg:sv <0x0e506694>
+		worklib.uvm_pkg:sv <0x05d43a19>
+			streams:  23, words: 50524
+		worklib.uvm_pkg:sv <0x5d7d2b4e>
 			streams:  30, words: 27020
 		worklib.uvm_pkg:sv <0x564fb3fd>
 			streams: 149, words: 141746
@@ -135,7 +147,7 @@ xmelab: *W,CONOTR (../UVME/agents/apb_agent/mc_apb_driver.sv,51|149): A clocking
 			streams: 160, words: 273923
 		worklib.uvm_pkg:sv <0x3e9eb83f>
 			streams:  23, words: 172059
-		worklib.uvm_pkg:sv <0x12f8806b>
+		worklib.uvm_pkg:sv <0x198f1f40>
 			streams:  23, words: 30607
 		worklib.uvm_pkg:sv <0x1b95d09d>
 			streams:  23, words: 24784
@@ -156,21 +168,21 @@ xmelab: *W,CONOTR (../UVME/agents/apb_agent/mc_apb_driver.sv,51|149): A clocking
 		Modules:                      80      30
 		Interfaces:                    2       2
 		Verilog packages:              5       5
-		Registers:                 16588   10998
+		Registers:                 16858   11134
 		Scalar wires:                414       -
 		Expanded wires:             1414      62
 		Vectored wires:              475       -
 		Named events:                  4      12
 		Always blocks:                79      78
-		Initial blocks:              357     178
+		Initial blocks:              375     184
 		Clocking blocks:               4       4
 		Clocking items:               74      74
 		Parallel blocks:              27      28
 		Cont. assignments:           331     246
 		Pseudo assignments:          178     178
 		Assertions:                    2       2
-		SV Class declarations:       220     333
-		SV Class specializations:    449     449
+		SV Class declarations:       226     339
+		SV Class specializations:    461     461
 	Writing initial simulation snapshot: worklib.rggen_apb_bridge:v
 Loading snapshot worklib.rggen_apb_bridge:v .................... Done
 SVSEED default: 1
@@ -222,37 +234,37 @@ UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 ----------------------------------------------------------------------------
 Name                       Type                                  Size  Value
 ----------------------------------------------------------------------------
-uvm_test_top               mc_ecc_enable_test                    -     @2765
-  env                      mc_env                                -     @2826
-    mc_apb_agent           mc_apb_agent                          -     @2904
-      apb_drv              mc_apb_driver                         -     @3209
-        rsp_port           uvm_analysis_port                     -     @3309
-        seq_item_port      uvm_seq_item_pull_port                -     @3258
-      apb_mon              mc_apb_monitor                        -     @3340
-        apb_analysis_port  uvm_analysis_port                     -     @4060
-      apb_seqr             mc_apb_sequencer                      -     @3375
-        rsp_export         uvm_analysis_export                   -     @3433
-        seq_item_export    uvm_seq_item_pull_imp                 -     @3981
+uvm_test_top               mc_ecc_enable_test                    -     @2787
+  env                      mc_env                                -     @2848
+    mc_apb_agent           mc_apb_agent                          -     @2926
+      apb_drv              mc_apb_driver                         -     @3231
+        rsp_port           uvm_analysis_port                     -     @3331
+        seq_item_port      uvm_seq_item_pull_port                -     @3280
+      apb_mon              mc_apb_monitor                        -     @3362
+        apb_analysis_port  uvm_analysis_port                     -     @4082
+      apb_seqr             mc_apb_sequencer                      -     @3397
+        rsp_export         uvm_analysis_export                   -     @3455
+        seq_item_export    uvm_seq_item_pull_imp                 -     @4003
         arbitration_queue  array                                 0     -    
         lock_queue         array                                 0     -    
         num_last_reqs      integral                              32    'd1  
         num_last_rsps      integral                              32    'd1  
-    mc_axi_agent           mc_axi_agent                          -     @2938
-      axi_drv              mc_axi_driver                         -     @4112
-        rsp_port           uvm_analysis_port                     -     @4212
-        seq_item_port      uvm_seq_item_pull_port                -     @4161
-      axi_mon              mc_axi_monitor                        -     @4191
-        axi_analysis_port  uvm_analysis_port                     -     @4948
-      axi_seqr             mc_axi_sequencer                      -     @4276
-        rsp_export         uvm_analysis_export                   -     @4333
-        seq_item_export    uvm_seq_item_pull_imp                 -     @4881
+    mc_axi_agent           mc_axi_agent                          -     @2960
+      axi_drv              mc_axi_driver                         -     @4134
+        rsp_port           uvm_analysis_port                     -     @4234
+        seq_item_port      uvm_seq_item_pull_port                -     @4183
+      axi_mon              mc_axi_monitor                        -     @4213
+        axi_analysis_port  uvm_analysis_port                     -     @4970
+      axi_seqr             mc_axi_sequencer                      -     @4298
+        rsp_export         uvm_analysis_export                   -     @4355
+        seq_item_export    uvm_seq_item_pull_imp                 -     @4903
         arbitration_queue  array                                 0     -    
         lock_queue         array                                 0     -    
         num_last_reqs      integral                              32    'd1  
         num_last_rsps      integral                              32    'd1  
-    predictor_inst         uvm_reg_predictor #(mc_axi_seq_item)  -     @3068
-      bus_in               uvm_analysis_imp                      -     @3121
-      reg_ap               uvm_analysis_port                     -     @3172
+    predictor_inst         uvm_reg_predictor #(mc_axi_seq_item)  -     @3090
+      bus_in               uvm_analysis_imp                      -     @3143
+      reg_ap               uvm_analysis_port                     -     @3194
 ----------------------------------------------------------------------------
 
 UVM_INFO ./../UVME/tests/mc_ecc_enable_test.sv(24) @ 0: uvm_test_top [uvm_test_top] Inside the ecc_enable test
@@ -265,10 +277,7 @@ Started drive_read
 Finished drive_read
 Finished Driving
 UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(37) @ 155: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Reset scenario 1 competed
-UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(28) @ 155: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] Scenario 3: Configuring ECC to enable mode
-UVM_INFO ./../UVME/agents/apb_agent/mc_apb_driver.sv(51) @ 175: uvm_test_top.env.mc_apb_agent.apb_drv [DRV] Mode : Write WDATA : 00000001 ADDR : 8
-UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(44) @ 195: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] ECC Status Register Value: 0x00000000
-UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(43) @ 195: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 2 Started
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(44) @ 155: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Reset disable scenario 2 Started
 Started Driving
 Started Drive Mem initial
 wr_rd Entered
@@ -276,15 +285,25 @@ Started drive_write
 Finished Drive Mem Initial
 Finished drive write
 Finished Driving
-UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(64) @ 164125: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 2 competed
-UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(70) @ 164125: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Read scenario 3 Started
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(63) @ 164095: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Reset disable scenario 2 competed
+UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(28) @ 164095: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] Scenario 3: Configuring ECC to enable mode
+UVM_INFO ./../UVME/agents/apb_agent/mc_apb_driver.sv(51) @ 164115: uvm_test_top.env.mc_apb_agent.apb_drv [DRV] Mode : Write WDATA : 00000001 ADDR : 8
+UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(44) @ 164135: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] ECC Status Register Value: 0x00000000
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(69) @ 164135: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 4 Started
+Started Driving
+wr_rd Entered
+Started drive_write
+Finished drive write
+Finished Driving
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(90) @ 164195: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 4 competed
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(96) @ 164195: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Read scenario 5 Started
 Started Driving
 wr_rd Entered
 Started drive_read
 Finished drive_read
 Finished Driving
-UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(84) @ 164185: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Read scenario 3 competed
-UVM_INFO /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 464185: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(110) @ 164255: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Read scenario 5 competed
+UVM_INFO /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 464255: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 
 --- UVM Report catcher Summary ---
 
@@ -299,7 +318,7 @@ Number of caught UVM_WARNING reports :    0
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :   31
+UVM_INFO :   33
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
@@ -319,10 +338,10 @@ UVM_FATAL :    0
 [apb_agent_class]     3
 [axi_agent_class]     3
 [env_class]     2
-[mc_ecc_enable_sequence]     6
+[mc_ecc_enable_sequence]     8
 [mc_ecc_enable_test]     2
 [uvm_test_top]     1
-Simulation complete via $finish(1) at time 464185 NS + 45
+Simulation complete via $finish(1) at time 464255 NS + 45
 /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s009: Exiting on Aug 07, 2025 at 12:15:49 IST  (total: 00:00:05)
+TOOL:	xrun(64)	20.09-s009: Exiting on Aug 07, 2025 at 18:31:58 IST  (total: 00:00:05)

@@ -37,10 +37,36 @@ class mc_ecc_enable_sequence extends uvm_sequence#(mc_axi_seq_item);
             `uvm_info(get_type_name(),$sformatf("Reset scenario 1 competed"),UVM_MEDIUM) 
          end
 
-    if (scenario == 2)
+// reset zero 
+    if(scenario == 2)
          begin
 
-           `uvm_info(get_type_name(),$sformatf("Write scenario 2 Started"),UVM_MEDIUM) 
+           `uvm_info(get_type_name(),$sformatf("Reset disable scenario 2 Started"),UVM_MEDIUM) 
+                    `uvm_do_with(axi_seq_item,{ 
+                         axi_seq_item.zmc_top_rstn    == 1;       
+                         axi_seq_item.zmc_top_sw_rst  == 0;                    
+                         axi_seq_item.zmc_top_mem_init== 0;
+
+                         axi_seq_item.wr_rd           == 1;                
+                         axi_seq_item.awvalid         == 1;                
+                         axi_seq_item.awlen           == 0;                             
+                         axi_seq_item.awburst         == 0;                       
+                         axi_seq_item.wdata[0]        == 0;                
+                         axi_seq_item.wstrb           == 0;                          
+                         axi_seq_item.wlast           == 1;                
+                         axi_seq_item.wvalid          == 1;                
+                         axi_seq_item.bready          == 1;
+                         axi_seq_item.awaddr          == 0;
+                         axi_seq_item.awlen           == 0;
+                         axi_seq_item.awburst         == 0;
+                         })                                      
+            `uvm_info(get_type_name(),$sformatf("Reset disable scenario 2 competed"),UVM_MEDIUM) 
+         end
+
+    if (scenario == 4)
+         begin
+
+           `uvm_info(get_type_name(),$sformatf("Write scenario 4 Started"),UVM_MEDIUM) 
                         // Read back the data to verify
                     `uvm_do_with(axi_seq_item, {
                          axi_seq_item.zmc_top_rstn    == 1;       
@@ -61,13 +87,13 @@ class mc_ecc_enable_sequence extends uvm_sequence#(mc_axi_seq_item);
                         len  = axi_seq_item.awlen ;
                         burst= axi_seq_item.awburst;
 
-           `uvm_info(get_type_name(),$sformatf("Write scenario 2 competed"),UVM_MEDIUM) 
+           `uvm_info(get_type_name(),$sformatf("Write scenario 4 competed"),UVM_MEDIUM) 
          end 
     
-    if (scenario == 3)
+    if (scenario == 5)
          begin
 
-           `uvm_info(get_type_name(),$sformatf("Read scenario 3 Started"),UVM_MEDIUM) 
+           `uvm_info(get_type_name(),$sformatf("Read scenario 5 Started"),UVM_MEDIUM) 
                         // Read back the data to verify
                     `uvm_do_with(axi_seq_item, {
                          axi_seq_item.zmc_top_rstn    == 1;
@@ -81,7 +107,7 @@ class mc_ecc_enable_sequence extends uvm_sequence#(mc_axi_seq_item);
                          axi_seq_item.rready          == 0; 
                          }) 
                     
-           `uvm_info(get_type_name(),$sformatf("Read scenario 3 competed"),UVM_MEDIUM) 
+           `uvm_info(get_type_name(),$sformatf("Read scenario 5 competed"),UVM_MEDIUM) 
          end 
     endtask
 endclass

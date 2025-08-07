@@ -43,7 +43,7 @@ class mc_ral_ecc_enable_sequence extends uvm_sequence;
 
       `uvm_info("RAL_SEQ", $sformatf("ECC Status Register Value: 0x%08x", rdata2), UVM_MEDIUM)
 
-    end // scenario == 3
+    end 
 
   endtask
 

@@ -2,20 +2,6 @@
 // File created by:  xrun
 // Do not modify this file
 
-s1::(07Aug2025:10:20:47):( xrun -access -clean +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_eec_enable_test )
-s2::(07Aug2025:10:21:33):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_eec_enable_test )
-s3::(07Aug2025:10:22:06):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s4::(07Aug2025:10:22:14):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s5::(07Aug2025:10:25:45):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s6::(07Aug2025:10:25:53):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s7::(07Aug2025:10:30:08):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s8::(07Aug2025:12:00:54):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s9::(07Aug2025:12:01:28):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s10::(07Aug2025:12:04:02):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s11::(07Aug2025:12:05:05):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s12::(07Aug2025:12:06:17):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s13::(07Aug2025:12:06:28):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s14::(07Aug2025:12:06:49):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s15::(07Aug2025:12:08:58):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s16::(07Aug2025:12:09:44):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
-s17::(07Aug2025:12:15:44):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
+s1::(07Aug2025:18:25:30):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
+s2::(07Aug2025:18:31:16):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )
+s3::(07Aug2025:18:31:53):( xrun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=mc_ecc_enable_test )

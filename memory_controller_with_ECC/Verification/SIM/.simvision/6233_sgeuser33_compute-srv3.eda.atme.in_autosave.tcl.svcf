@@ -211,7 +211,7 @@ set groupId2 [waveform find -name {Status Register}]
 
 
 
-waveform xview limits 163960ns 164243ns
+waveform xview limits 163961ns 164225ns
 
 #
 # Waveform Window Links

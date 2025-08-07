@@ -24,6 +24,8 @@ package mc_uvm_pkg;
 
     `include "./../UVME/sequences/ral_sequence/mc_ral_ecc_disable_sequence.sv"
     `include "./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv"
+    `include "./../UVME/sequences/ral_sequence/mc_ral_random_wr_sequence.sv"
+    `include "./../UVME/sequences/ral_sequence/mc_ral_random_wr_rd_sequence.sv"
 
     `include "./../UVME/sequences/axi_sequence/mc_base_sequence.sv"
     `include "./../UVME/sequences/axi_sequence/mc_reset_sequence.sv"
@@ -31,6 +33,8 @@ package mc_uvm_pkg;
     `include "./../UVME/sequences/axi_sequence/mc_mem_initial_sequence.sv"
     `include "./../UVME/sequences/axi_sequence/mc_ecc_disable_sequence.sv"
     `include "./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv"
+    `include "./../UVME/sequences/axi_sequence/mc_random_wr_sequence.sv"
+    `include "./../UVME/sequences/axi_sequence/mc_random_wr_rd_sequence.sv"
 
     `include "./../UVME/tests/mc_base_test.sv"
     `include "./../UVME/tests/mc_reset_test.sv"
@@ -38,5 +42,7 @@ package mc_uvm_pkg;
     `include "./../UVME/tests/mc_mem_initial_test.sv"
     `include "./../UVME/tests/mc_ecc_disable_test.sv"
     `include "./../UVME/tests/mc_ecc_enable_test.sv"
+    `include "./../UVME/tests/mc_random_wr_test.sv"
+    `include "./../UVME/tests/mc_random_wr_rd_test.sv"
 
     endpackage
