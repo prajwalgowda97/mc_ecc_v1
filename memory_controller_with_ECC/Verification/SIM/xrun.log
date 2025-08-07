@@ -1,7 +1,6 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Jul 25, 2025 at 15:17:13 IST
+TOOL:	xrun(64)	20.09-s009: Started on Aug 07, 2025 at 12:09:44 IST
 xrun
-	-clean
 	-access +rwc
 	-f compile_list.f
 		./../../MEM_ctrl_AXI/AXI4_slave.sv
@@ -39,97 +38,11 @@ xrun
 		./../UVME/top/mc_interface.sv
 		./../UVME/top/mc_apb_interface.sv
 	-uvmhome CDNS-1.1d
-	+UVM_TESTNAME=mc_mem_initial_test
-xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+	+UVM_TESTNAME=mc_ecc_enable_test
+Recompiling... reason: file '../UVME/tests/mc_ecc_enable_test.sv' is newer than expected.
+	expected: Thu Aug  7 12:08:42 2025
+	actual:   Thu Aug  7 12:09:42 2025
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
-file: ./../../MEM_ctrl_AXI/AXI4_slave.sv
-	module worklib.axi4_slave:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/data_decoding.sv
-	module worklib.data_decoding:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/data_encoding.sv
-	module worklib.data_enc:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/dual_port_ram.sv
-	module worklib.dual_port_ram:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/ECC_decoding_top.sv
-	module worklib.ECC_decoding:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/ECC_encoding_top.sv
-	module worklib.ECC_encoding:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/err_det_corr.sv
-	module worklib.err_det_corr:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/MC_CSR_reg.sv
-	module worklib.CSR_registers:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/Memory_Controller_ECC.sv
-	module worklib.mem_ctrl:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/parity_calculator_rd.sv
-	module worklib.parity_calc_rd:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/parity_calculator_wr.sv
-	module worklib.parity_calculator:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/Zilla_mem_ctrl_Top.sv
-	module worklib.zmc_axi4_top:sv
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_adapter_common.v
-	module worklib.rggen_adapter_common:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_address_decoder.v
-	module worklib.rggen_address_decoder:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_apb_adapter.v
-	module worklib.rggen_apb_adapter:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_apb_bridge.v
-	module worklib.rggen_apb_bridge:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_axi4lite_adapter.v
-	module worklib.rggen_axi4lite_adapter:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_axi4lite_bridge.v
-	module worklib.rggen_axi4lite_bridge:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_axi4lite_skid_buffer.v
-	module worklib.rggen_skid_buffer:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_bit_field.v
-	module worklib.rggen_bit_field:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_bit_field_w01trg.v
-	module worklib.rggen_bit_field_w01trg:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_default_register.v
-	module worklib.rggen_default_register:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_external_register.v
-	module worklib.rggen_external_register:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_indirect_register.v
-	module worklib.rggen_indirect_register:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_mux.v
-	module worklib.rggen_mux:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_or_reducer.v
-	module worklib.rggen_or_reducer:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_register_common.v
-	module worklib.rggen_register_common:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_rtl_macros.vh
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_wishbone_adapter.v
-	module worklib.rggen_wishbone_adapter:v
-		errors: 0, warnings: 0
-file: ./../../MEM_ctrl_AXI/rggen_files/rggen_wishbone_bridge.v
-	module worklib.rggen_wishbone_bridge:v
-		errors: 0, warnings: 0
 file: ./../UVME/uvm_pkg/mc_uvm_pkg.sv
 package mc_uvm_pkg;
                  |
@@ -138,12 +51,6 @@ xmvlog: *W,TSNSPK (./../UVME/uvm_pkg/mc_uvm_pkg.sv,1|17): `timescale is not spec
 		errors: 0, warnings: 1
 file: ./../UVME/top/mc_top.sv
 	module worklib.mc_top:sv
-		errors: 0, warnings: 0
-file: ./../UVME/top/mc_interface.sv
-	interface worklib.mc_interface:sv
-		errors: 0, warnings: 0
-file: ./../UVME/top/mc_apb_interface.sv
-	interface worklib.mc_apb_interface:sv
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
@@ -178,260 +85,70 @@ xmelab: *W,CONOTR (../UVME/agents/apb_agent/mc_apb_driver.sv,51|149): A clocking
 xmelab: *W,CONOTR (../UVME/agents/apb_agent/mc_apb_driver.sv,51|149): A clocking output is not a legal rvalue [IEEE STD 1800-2009].
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.dual_port_ram:sv <0x3beb6943>
-			streams:   4, words:  1937
-		worklib.rggen_address_decoder:v <0x54d2974c>
-			streams:   5, words:  1290
-		worklib.rggen_default_register:v <0x621b9d0c>
-			streams:   1, words:   153
-		worklib.rggen_address_decoder:v <0x192b7081>
-			streams:   5, words:  1290
-		worklib.rggen_default_register:v <0x1afcc39f>
-			streams:   1, words:   153
-		worklib.rggen_address_decoder:v <0x1d0a8960>
-			streams:   5, words:  1290
-		worklib.rggen_default_register:v <0x794296f9>
-			streams:   1, words:   153
-		worklib.rggen_bit_field:v <0x655559ef>
-			streams:  14, words:  6176
-		worklib.rggen_address_decoder:v <0x50f36ead>
-			streams:   5, words:  1290
-		worklib.rggen_default_register:v <0x01a5c86a>
-			streams:   1, words:   153
-		worklib.rggen_address_decoder:v <0x3eee8ebb>
-			streams:   5, words:  1259
-		worklib.rggen_default_register:v <0x27287076>
-			streams:   1, words:   153
-		worklib.rggen_address_decoder:v <0x73176976>
-			streams:   5, words:  1259
-		worklib.rggen_default_register:v <0x5fcf2ee5>
-			streams:   1, words:   153
-		worklib.rggen_bit_field:v <0x68c82192>
-			streams:  17, words:  7595
-		worklib.rggen_address_decoder:v <0x77369097>
-			streams:   5, words:  1259
-		worklib.rggen_default_register:v <0x3c717b83>
-			streams:   1, words:   153
-		worklib.rggen_bit_field:v <0x270f8c5b>
-			streams:  17, words:  7579
-		worklib.rggen_mux:v <0x233629e5>
-			streams:   1, words:   208
-		worklib.rggen_address_decoder:v <0x3acf775a>
-			streams:   5, words:  1251
-		worklib.rggen_default_register:v <0x44962510>
-			streams:   1, words:   153
-		worklib.rggen_adapter_common:v <0x4b8a740c>
-			streams:  13, words:  3031
-		worklib.rggen_apb_adapter:v <0x5bde2b9c>
-			streams:   8, words:  1856
-		worklib.err_det_corr:sv <0x746ac5ad>
-			streams:   5, words: 10647
-		worklib.parity_calc_rd:sv <0x5f04bb73>
-			streams:   5, words:  6500
-		worklib.data_decoding:sv <0x0508019f>
-			streams:   1, words:   988
-		worklib.ECC_decoding:sv <0x63d39d97>
-			streams:  23, words:  6741
-		worklib.data_enc:sv <0x31fa6a19>
-			streams:   4, words:  2760
-		worklib.parity_calculator:sv <0x59d2c113>
-			streams:   2, words:  6068
-		worklib.ECC_encoding:sv <0x3c330d56>
-			streams:  13, words:  3545
-		worklib.mem_ctrl:sv <0x4875b462>
-			streams:  61, words: 25687
-		worklib.axi4_slave:sv <0x599fd221>
-			streams:  42, words: 31734
-		worklib.zmc_axi4_top:sv <0x545711f2>
-			streams:  47, words: 13317
-		worklib.rggen_wishbone_bridge:v <0x34126d2e>
-			streams:  10, words:  2354
-		worklib.rggen_adapter_common:v <0x6f0ccfc4>
-			streams:  11, words:  2469
-		worklib.rggen_wishbone_adapter:v <0x7c3f82c1>
-			streams:  25, words:  7749
-		worklib.rggen_address_decoder:v <0x1c4ca89d>
-			streams:   5, words:  1251
-		worklib.rggen_indirect_register:v <0x4e3fc668>
-			streams:   1, words:   169
-		worklib.rggen_address_decoder:v <0x178f2608>
-			streams:   5, words:  1251
-		worklib.rggen_external_register:v <0x5822070d>
-			streams:  11, words:  3470
-		worklib.rggen_bit_field_w01trg:v <0x2c94912d>
-			streams:   3, words:   957
-		worklib.rggen_axi4lite_bridge:v <0x1bc36d97>
-			streams:  16, words:  5574
-		worklib.rggen_mux:v <0x157f1747>
-			streams:   1, words:   150
-		worklib.rggen_mux:v <0x02f166ad>
-			streams:   1, words:   158
-		worklib.rggen_adapter_common:v <0x04ac07c4>
-			streams:  11, words:  2469
-		worklib.rggen_skid_buffer:v <0x2532d5f0>
-			streams:  33, words:  9247
-		worklib.rggen_axi4lite_adapter:v <0x3229d1bb>
-			streams:  17, words:  5969
-		worklib.rggen_apb_bridge:v <0x6b718cfb>
-			streams:  10, words:  2017
-		worklib.uvm_pkg:sv <0x5331d2f1>
-			streams:   6, words:  3460
-		worklib.uvm_pkg:sv <0x07414e8e>
-			streams:   6, words:  3120
-		worklib.uvm_pkg:sv <0x101a5c61>
-			streams:   5, words:  2530
-		worklib.uvm_pkg:sv <0x149745c1>
-			streams:   7, words:  1927
-		worklib.uvm_pkg:sv <0x155c3215>
-			streams:   8, words:  2774
-		worklib.uvm_pkg:sv <0x52968afe>
-			streams:  21, words: 50384
-		worklib.uvm_pkg:sv <0x51388d3c>
-			streams:   7, words:  1927
-		worklib.uvm_pkg:sv <0x6b4d9540>
-			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x6f3b31fc>
-			streams:  24, words: 20005
-		worklib.uvm_pkg:sv <0x7c0100bc>
-			streams:  24, words: 19057
-		worklib.uvm_pkg:sv <0x4f42e6f4>
-			streams:  20, words: 18548
-		worklib.uvm_pkg:sv <0x08ad4025>
-			streams:  11, words:  4487
-		worklib.uvm_pkg:sv <0x630b4ab1>
-			streams:  23, words: 28699
-		worklib.uvm_pkg:sv <0x1cdedbd4>
-			streams:   7, words:  2431
-		worklib.uvm_pkg:sv <0x5bdad851>
-			streams:  12, words: 16092
-		worklib.uvm_pkg:sv <0x7f267d11>
-			streams:  23, words: 24178
-		worklib.uvm_pkg:sv <0x78982630>
-			streams:  22, words: 51194
-		worklib.uvm_pkg:sv <0x623ead2d>
-			streams:  25, words: 32248
-		worklib.uvm_pkg:sv <0x22f9ee31>
-			streams:  24, words: 46655
-		worklib.uvm_pkg:sv <0x19fa9fd0>
-			streams:  25, words: 35031
-		worklib.uvm_pkg:sv <0x5bfe2387>
-			streams:  23, words: 52165
-		worklib.uvm_pkg:sv <0x48baffee>
-			streams:  25, words: 37109
-		worklib.uvm_pkg:sv <0x72511d95>
-			streams:  23, words: 57796
-		worklib.uvm_pkg:sv <0x43a5bfad>
-			streams:  25, words: 41735
-		worklib.uvm_pkg:sv <0x40be7812>
-			streams:  23, words: 50753
-		worklib.uvm_pkg:sv <0x5ac528ff>
-			streams:  23, words: 53731
-		worklib.uvm_pkg:sv <0x1739da57>
-			streams:  25, words: 34315
-		worklib.uvm_pkg:sv <0x5495e28c>
-			streams:  23, words: 50381
-		worklib.uvm_pkg:sv <0x7a1540c5>
-			streams:  25, words: 77049
-		worklib.uvm_pkg:sv <0x7016f3a1>
-			streams:  53, words: 73144
-		worklib.cdns_uvm_pkg:sv <0x33cb8cf8>
-			streams:  26, words: 34197
-		worklib.cdns_uvm_pkg:sv <0x0691b889>
-			streams:   8, words:  4031
-		worklib.cdns_uvm_pkg:sv <0x0d056409>
-			streams:  10, words:  8705
-		worklib.uvm_pkg:sv <0x5f67c52b>
+		worklib.uvm_pkg:sv <0x2035bba0>
 			streams:  21, words: 18143
-		worklib.uvm_pkg:sv <0x51a14972>
+		worklib.uvm_pkg:sv <0x0d0a69a2>
 			streams:  23, words: 26124
-		worklib.uvm_pkg:sv <0x402f1001>
+		worklib.uvm_pkg:sv <0x7c74d549>
 			streams:  21, words: 18143
-		worklib.uvm_pkg:sv <0x47db6152>
+		worklib.uvm_pkg:sv <0x55ca6184>
 			streams:  23, words: 32445
-		worklib.uvm_pkg:sv <0x2801c60e>
+		worklib.uvm_pkg:sv <0x68c22ff1>
 			streams:  21, words: 21971
-		worklib.mc_uvm_pkg:sv <0x0190a667>
-			streams:  22, words: 20717
-		worklib.uvm_pkg:sv <0x631e7c2c>
-			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x0f030e91>
-			streams:  22, words: 21674
-		worklib.uvm_pkg:sv <0x1ecbae5a>
-			streams:  22, words: 23460
-		worklib.uvm_pkg:sv <0x560caa04>
-			streams:  22, words: 23861
-		worklib.uvm_pkg:sv <0x2570a08c>
-			streams: 148, words: 141015
-		worklib.uvm_pkg:sv <0x79d0b75d>
-			streams: 155, words: 219259
-		worklib.uvm_pkg:sv <0x19db77c3>
-			streams:  22, words: 43427
-		worklib.uvm_pkg:sv <0x0d429f71>
-			streams:  22, words: 23460
-		worklib.uvm_pkg:sv <0x724b321a>
-			streams:   8, words:  4212
-		worklib.uvm_pkg:sv <0x7e447378>
-			streams:  22, words: 23861
-		worklib.uvm_pkg:sv <0x7619276a>
-			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x241243b4>
+		worklib.uvm_pkg:sv <0x5d709ad3>
 			streams:  23, words: 41390
-		worklib.uvm_pkg:sv <0x2daa4dae>
+		worklib.uvm_pkg:sv <0x50442a7b>
+			streams:  21, words: 24903
+		worklib.uvm_pkg:sv <0x4b0d9c4e>
+			streams:  23, words: 41473
+		worklib.uvm_pkg:sv <0x081e0626>
+			streams:  23, words: 29407
+		worklib.uvm_pkg:sv <0x599aa44c>
+			streams:  21, words: 20631
+		worklib.mc_uvm_pkg:sv <0x29aaa45a>
+			streams:  22, words: 20717
+		worklib.uvm_pkg:sv <0x6b69c4c0>
+			streams:  52, words: 77922
+		worklib.uvm_pkg:sv <0x0d49f261>
+			streams:  22, words: 23460
+		worklib.uvm_pkg:sv <0x0d6b9567>
+			streams:  22, words: 23861
+		worklib.uvm_pkg:sv <0x150de359>
+			streams: 148, words: 141015
+		worklib.uvm_pkg:sv <0x08597508>
+			streams: 155, words: 219259
+		worklib.uvm_pkg:sv <0x71e7a717>
+			streams:  22, words: 23460
+		worklib.uvm_pkg:sv <0x3cdbe992>
+			streams:  22, words: 23861
+		worklib.uvm_pkg:sv <0x1f97e0fe>
+			streams:  24, words: 31601
+		worklib.uvm_pkg:sv <0x6677f9c7>
+			streams:  22, words: 43427
+		worklib.uvm_pkg:sv <0x1050c59a>
+			streams:  23, words: 43015
+		worklib.uvm_pkg:sv <0x0e506694>
 			streams:  30, words: 27020
-		worklib.uvm_pkg:sv <0x5f52ac9b>
+		worklib.uvm_pkg:sv <0x564fb3fd>
 			streams: 149, words: 141746
-		worklib.uvm_pkg:sv <0x0338007a>
-			streams: 159, words: 265693
-		worklib.uvm_pkg:sv <0x3fe594ee>
+		worklib.uvm_pkg:sv <0x242a9d1d>
+			streams: 160, words: 273923
+		worklib.uvm_pkg:sv <0x3e9eb83f>
 			streams:  23, words: 172059
-		worklib.mc_top:sv <0x00feffc1>
+		worklib.uvm_pkg:sv <0x12f8806b>
+			streams:  23, words: 30607
+		worklib.uvm_pkg:sv <0x1b95d09d>
+			streams:  23, words: 24784
+		worklib.uvm_pkg:sv <0x4baba1f0>
+			streams:  23, words: 21989
+		worklib.uvm_pkg:sv <0x133891e2>
+			streams:  23, words: 21989
+		worklib.uvm_pkg:sv <0x196ba048>
+			streams:  23, words: 21989
+		worklib.mc_top:sv <0x3ca4fc65>
 			streams: 150, words: 168546
-		worklib.mc_uvm_pkg:sv <0x7caefce9>
+		worklib.mc_uvm_pkg:sv <0x2e3f57dd>
 			streams:   0, words:     0
-		worklib.cdns_uvm_pkg:sv <0x0bb2e996>
-			streams: 128, words: 240666
-		worklib.cdns_uvmapi:svp <0x141444f1>
-			streams:  27, words: 31790
-		worklib.cdns_assert2uvm_pkg:sv <0x1bb491cc>
-			streams:   3, words:  2239
-		worklib.uvm_pkg:sv <0x68c31baa>
-			streams: 3940, words: 6487959
-		worklib.mc_interface:sv <0x2e4bd628>
-			streams:  85, words: 51408
-		worklib.mc_apb_interface:sv <0x44fd49d1>
-			streams:  19, words: 14714
-		worklib.rggen_register_common:v <0x58517886>
-			streams:  13, words:  4085
-		worklib.rggen_or_reducer:v <0x50bcee69>
-			streams:   4, words:  6655
-		worklib.rggen_mux:v <0x1cfd2a80>
-			streams:   1, words:   435
-		worklib.rggen_or_reducer:v <0x4591bc0e>
-			streams:   4, words:  6701
-		worklib.rggen_mux:v <0x78ab9968>
-			streams:   1, words:   448
-		worklib.rggen_register_common:v <0x4dc61132>
-			streams:  13, words:  4382
-		worklib.rggen_register_common:v <0x55d3e9b2>
-			streams:  13, words:  4390
-		worklib.rggen_register_common:v <0x757afccf>
-			streams:  13, words:  4390
-		worklib.rggen_register_common:v <0x2b5e5b64>
-			streams:  13, words:  4390
-		worklib.rggen_register_common:v <0x35599b29>
-			streams:  13, words:  4394
-		worklib.rggen_register_common:v <0x2d4c63a9>
-			streams:  13, words:  4394
-		worklib.rggen_register_common:v <0x263570cb>
-			streams:  13, words:  4394
-		worklib.rggen_register_common:v <0x7811d760>
-			streams:  13, words:  4394
-		worklib.rggen_or_reducer:v <0x728ef481>
-			streams:   5, words:  3801
-		worklib.rggen_or_reducer:v <0x30ea0f84>
-			streams:   5, words:  3940
-		worklib.CSR_registers:sv <0x78e2c6b1>
-			streams:  28, words:  7054
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -439,21 +156,21 @@ xmelab: *W,CONOTR (../UVME/agents/apb_agent/mc_apb_driver.sv,51|149): A clocking
 		Modules:                      80      30
 		Interfaces:                    2       2
 		Verilog packages:              5       5
-		Registers:                 16040   10761
+		Registers:                 16588   10998
 		Scalar wires:                414       -
 		Expanded wires:             1414      62
 		Vectored wires:              475       -
 		Named events:                  4      12
 		Always blocks:                79      78
-		Initial blocks:              321     167
+		Initial blocks:              357     178
 		Clocking blocks:               4       4
 		Clocking items:               74      74
-		Parallel blocks:              26      27
+		Parallel blocks:              27      28
 		Cont. assignments:           331     246
 		Pseudo assignments:          178     178
 		Assertions:                    2       2
-		SV Class declarations:       208     322
-		SV Class specializations:    424     424
+		SV Class declarations:       220     333
+		SV Class specializations:    449     449
 	Writing initial simulation snapshot: worklib.rggen_apb_bridge:v
 Loading snapshot worklib.rggen_apb_bridge:v .................... Done
 SVSEED default: 1
@@ -483,13 +200,14 @@ CDNS-UVM-1.1d (20.09-s009)
       (Specify +UVM_NO_RELNOTES to turn off this notice)
 
 UVM_INFO ./../UVME/top/mc_top.sv(62) @ 0: reporter [TOP] zmc_top_clk=0
-UVM_INFO ./../UVME/tests/mc_base_test.sv(13) @ 0: uvm_test_top [mc_mem_initial_test] Inside Constuctor!
-UVM_INFO @ 0: reporter [RNTST] Running test mc_mem_initial_test...
-UVM_INFO ./../UVME/env/mc_env.sv(14) @ 0: uvm_test_top.env [env_class] Inside constructor!
-UVM_INFO ./../UVME/tests/mc_base_test.sv(22) @ 0: uvm_test_top [mc_mem_initial_test] Inside Build Phase!
+UVM_INFO ./../UVME/tests/mc_base_test.sv(13) @ 0: uvm_test_top [mc_ecc_enable_test] Inside Constuctor!
+UVM_INFO @ 0: reporter [RNTST] Running test mc_ecc_enable_test...
+UVM_INFO ./../UVME/env/mc_env.sv(17) @ 0: uvm_test_top.env [env_class] Inside constructor!
+UVM_INFO ./../UVME/tests/mc_base_test.sv(22) @ 0: uvm_test_top [mc_ecc_enable_test] Inside Build Phase!
 UVM_INFO ./../UVME/agents/apb_agent/mc_apb_agent.sv(13) @ 0: uvm_test_top.env.mc_apb_agent [apb_agent_class] Inside constructor!
 UVM_INFO ./../UVME/agents/axi_agent/mc_axi_agent.sv(13) @ 0: uvm_test_top.env.mc_axi_agent [axi_agent_class] Inside constructor!
-UVM_INFO ./../UVME/env/mc_env.sv(23) @ 0: uvm_test_top.env [env_class] Inside Build Phase!
+UVM_INFO ./../UVME/env/mc_env.sv(32) @ 0: uvm_test_top.env [SEQ] Register model handle is valid: regmodel
+UVM_INFO ./../UVME/env/mc_env.sv(37) @ 0: uvm_test_top.env [env_class] Inside Build Phase!
 UVM_INFO ./../UVME/agents/apb_agent/mc_apb_monitor.sv(15) @ 0: uvm_test_top.env.mc_apb_agent.apb_mon [apb_Monitor_class] Inside Constructor!
 UVM_INFO ./../UVME/agents/apb_agent/mc_apb_sequencer.sv(8) @ 0: uvm_test_top.env.mc_apb_agent.apb_seqr [Sequencer_APB_class] Inside Constructor!
 UVM_INFO ./../UVME/agents/apb_agent/mc_apb_agent.sv(22) @ 0: uvm_test_top.env.mc_apb_agent [apb_agent_class] Inside Build Phase!
@@ -501,63 +219,72 @@ UVM_INFO ./../UVME/agents/axi_agent/mc_axi_monitor.sv(22) @ 0: uvm_test_top.env.
 UVM_INFO ./../UVME/agents/apb_agent/mc_apb_agent.sv(29) @ 0: uvm_test_top.env.mc_apb_agent [apb_agent_class] Inside Connect Phase!
 UVM_INFO ./../UVME/agents/axi_agent/mc_axi_agent.sv(29) @ 0: uvm_test_top.env.mc_axi_agent [axi_agent_class] Inside Connect Phase!
 UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
---------------------------------------------------------------
-Name                       Type                    Size  Value
---------------------------------------------------------------
-uvm_test_top               mc_mem_initial_test     -     @2722
-  env                      mc_env                  -     @2797
-    mc_apb_agent           mc_apb_agent            -     @2847
-      apb_drv              mc_apb_driver           -     @2921
-        rsp_port           uvm_analysis_port       -     @3021
-        seq_item_port      uvm_seq_item_pull_port  -     @2970
-      apb_mon              mc_apb_monitor          -     @3052
-        apb_analysis_port  uvm_analysis_port       -     @3772
-      apb_seqr             mc_apb_sequencer        -     @3087
-        rsp_export         uvm_analysis_export     -     @3145
-        seq_item_export    uvm_seq_item_pull_imp   -     @3693
-        arbitration_queue  array                   0     -    
-        lock_queue         array                   0     -    
-        num_last_reqs      integral                32    'd1  
-        num_last_rsps      integral                32    'd1  
-    mc_axi_agent           mc_axi_agent            -     @2881
-      axi_drv              mc_axi_driver           -     @3824
-        rsp_port           uvm_analysis_port       -     @3924
-        seq_item_port      uvm_seq_item_pull_port  -     @3873
-      axi_mon              mc_axi_monitor          -     @3955
-        axi_analysis_port  uvm_analysis_port       -     @4662
-      axi_seqr             mc_axi_sequencer        -     @3990
-        rsp_export         uvm_analysis_export     -     @4047
-        seq_item_export    uvm_seq_item_pull_imp   -     @4595
-        arbitration_queue  array                   0     -    
-        lock_queue         array                   0     -    
-        num_last_reqs      integral                32    'd1  
-        num_last_rsps      integral                32    'd1  
---------------------------------------------------------------
+----------------------------------------------------------------------------
+Name                       Type                                  Size  Value
+----------------------------------------------------------------------------
+uvm_test_top               mc_ecc_enable_test                    -     @2765
+  env                      mc_env                                -     @2826
+    mc_apb_agent           mc_apb_agent                          -     @2904
+      apb_drv              mc_apb_driver                         -     @3209
+        rsp_port           uvm_analysis_port                     -     @3309
+        seq_item_port      uvm_seq_item_pull_port                -     @3258
+      apb_mon              mc_apb_monitor                        -     @3340
+        apb_analysis_port  uvm_analysis_port                     -     @4060
+      apb_seqr             mc_apb_sequencer                      -     @3375
+        rsp_export         uvm_analysis_export                   -     @3433
+        seq_item_export    uvm_seq_item_pull_imp                 -     @3981
+        arbitration_queue  array                                 0     -    
+        lock_queue         array                                 0     -    
+        num_last_reqs      integral                              32    'd1  
+        num_last_rsps      integral                              32    'd1  
+    mc_axi_agent           mc_axi_agent                          -     @2938
+      axi_drv              mc_axi_driver                         -     @4112
+        rsp_port           uvm_analysis_port                     -     @4212
+        seq_item_port      uvm_seq_item_pull_port                -     @4161
+      axi_mon              mc_axi_monitor                        -     @4191
+        axi_analysis_port  uvm_analysis_port                     -     @4948
+      axi_seqr             mc_axi_sequencer                      -     @4276
+        rsp_export         uvm_analysis_export                   -     @4333
+        seq_item_export    uvm_seq_item_pull_imp                 -     @4881
+        arbitration_queue  array                                 0     -    
+        lock_queue         array                                 0     -    
+        num_last_reqs      integral                              32    'd1  
+        num_last_rsps      integral                              32    'd1  
+    predictor_inst         uvm_reg_predictor #(mc_axi_seq_item)  -     @3068
+      bus_in               uvm_analysis_imp                      -     @3121
+      reg_ap               uvm_analysis_port                     -     @3172
+----------------------------------------------------------------------------
 
-UVM_INFO ./../UVME/tests/mc_mem_initial_test.sv(21) @ 0: uvm_test_top [uvm_test_top] Inside the mem_initial test
+UVM_INFO ./../UVME/tests/mc_ecc_enable_test.sv(24) @ 0: uvm_test_top [uvm_test_top] Inside the ecc_enable test
 started initializaation
 finished initialization
-Started Drive Mem initial
-Finished Drive Mem Initial
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(32) @ 0: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Reset scenario 1 Started
 Started Driving
-Started drive_write
-Finished drive write
-Finished Driving
-UVM_INFO ./../UVME/sequences/mc_mem_initial_sequence.sv(35) @ 164065: uvm_test_top.env.mc_axi_agent.axi_seqr@@mem_initial_seq [SAMPLE] scenario 1 axi_seq_item.zmc_top_rstn=0,axi_seq_item.wr_rd=1
-UVM_INFO ./../UVME/tests/mc_mem_initial_test.sv(25) @ 164065: uvm_test_top [mc_mem_initial_test] mem_initial scenario 1 is competed
-Started Driving
-Started drive_write
-Finished drive write
-Finished Driving
-UVM_INFO ./../UVME/sequences/mc_mem_initial_sequence.sv(60) @ 164115: uvm_test_top.env.mc_axi_agent.axi_seqr@@mem_initial_seq [SAMPLE] scenario 2 axi_seq_item.zmc_top_rstn=1,axi_seq_item.wr_rd=1
-UVM_INFO ./../UVME/tests/mc_mem_initial_test.sv(29) @ 164115: uvm_test_top [mc_mem_initial_test] mem_initial scenario 2 is competed
-Started Driving
+wr_rd Entered
 Started drive_read
 Finished drive_read
 Finished Driving
-UVM_INFO ./../UVME/sequences/mc_mem_initial_sequence.sv(78) @ 164155: uvm_test_top.env.mc_axi_agent.axi_seqr@@mem_initial_seq [SAMPLE] scenario 2 axi_seq_item.zmc_top_rstn=1,axi_seq_item.wr_rd=0
-UVM_INFO ./../UVME/tests/mc_mem_initial_test.sv(33) @ 164155: uvm_test_top [mc_mem_initial_test] mem_initial scenario 3 is competed
-UVM_INFO /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 464155: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(37) @ 155: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Reset scenario 1 competed
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(43) @ 155: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 2 Started
+Started Driving
+Started Drive Mem initial
+wr_rd Entered
+Started drive_write
+Finished Drive Mem Initial
+Finished drive write
+Finished Driving
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(64) @ 164095: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 2 competed
+UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(28) @ 164095: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] Scenario 3: Configuring ECC to enable mode
+UVM_INFO ./../UVME/agents/apb_agent/mc_apb_driver.sv(51) @ 164115: uvm_test_top.env.mc_apb_agent.apb_drv [DRV] Mode : Write WDATA : 00000001 ADDR : 8
+UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(44) @ 164135: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] ECC Status Register Value: 0x00000000
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(70) @ 164135: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Read scenario 3 Started
+Started Driving
+wr_rd Entered
+Started drive_read
+Finished drive_read
+Finished Driving
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(84) @ 164185: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Read scenario 3 competed
+UVM_INFO /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 464185: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 
 --- UVM Report catcher Summary ---
 
@@ -572,15 +299,17 @@ Number of caught UVM_WARNING reports :    0
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :   27
+UVM_INFO :   31
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
 ** Report counts by id
 [APB_Monitor_class]     1
 [AXI_Monitor_class]     2
+[DRV]     1
+[RAL_SEQ]     2
 [RNTST]     1
-[SAMPLE]     3
+[SEQ]     1
 [Sequencer_APB_class]     1
 [Sequencer_AXI_class]     1
 [TEST_DONE]     1
@@ -590,9 +319,10 @@ UVM_FATAL :    0
 [apb_agent_class]     3
 [axi_agent_class]     3
 [env_class]     2
-[mc_mem_initial_test]     5
+[mc_ecc_enable_sequence]     6
+[mc_ecc_enable_test]     2
 [uvm_test_top]     1
-Simulation complete via $finish(1) at time 464155 NS + 45
+Simulation complete via $finish(1) at time 464185 NS + 45
 /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s009: Exiting on Jul 25, 2025 at 15:17:21 IST  (total: 00:00:08)
+TOOL:	xrun(64)	20.09-s009: Exiting on Aug 07, 2025 at 12:09:49 IST  (total: 00:00:05)

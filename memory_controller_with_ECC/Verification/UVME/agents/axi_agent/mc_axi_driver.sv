@@ -6,6 +6,7 @@ class mc_axi_driver extends uvm_driver #(mc_axi_seq_item);
     // Virtual interface
     virtual mc_interface intf;
 
+    bit mem_init_flag;
 
  //////////////////////////////////////////////////////////////////////
 // New Function: New Constructor of Driver
@@ -36,9 +37,15 @@ class mc_axi_driver extends uvm_driver #(mc_axi_seq_item);
         repeat(2)
         @(intf.mc_driver_cb);            
                
-        
-           drive_mem_init(); 
-       
+        fork
+            begin
+                if(!mem_init_flag)begin
+                    wait(intf.mc_monitor_cb.zmc_top_rstn && !intf.mc_monitor_cb.zmc_top_sw_rst)
+                    drive_mem_init();
+                    mem_init_flag = 1;
+                end
+            end
+        join_none
 
         forever begin
             seq_item_port.get_next_item(req);
@@ -53,10 +60,21 @@ class mc_axi_driver extends uvm_driver #(mc_axi_seq_item);
     task send2dut(mc_axi_seq_item axi_seq_item);
         $display("Started Driving");
 
+        repeat(2)
+         @(intf.mc_driver_cb);
+
         intf.mc_driver_cb.zmc_top_rstn      <= axi_seq_item.zmc_top_rstn; 
         intf.mc_driver_cb.zmc_top_sw_rst    <= axi_seq_item.zmc_top_sw_rst;
 
+        if(!mem_init_flag && axi_seq_item.zmc_top_rstn && !axi_seq_item.zmc_top_sw_rst)begin
+            while(!intf.mc_driver_cb.MEM_init_ACK)
+                @(intf.mc_driver_cb);
 
+            while(intf.mc_driver_cb.MEM_init_ACK)
+                @(intf.mc_driver_cb);
+        end
+
+        $display("wr_rd Entered");
         if(axi_seq_item.wr_rd)
             drive_write(axi_seq_item);
         else
@@ -78,7 +96,7 @@ class mc_axi_driver extends uvm_driver #(mc_axi_seq_item);
         intf.mc_driver_cb.zmc_top_mem_init <= 1'b1;
 
         // Step 2: Wait for MEM_init_ACK to be asserted
-        if(intf.mc_monitor_cb.zmc_top_rstn && !intf.mc_monitor_cb.zmc_top_sw_rst)
+        //if(intf.mc_monitor_cb.zmc_top_rstn && !intf.mc_monitor_cb.zmc_top_sw_rst)
             while(!intf.mc_driver_cb.MEM_init_ACK)
                 @(intf.mc_driver_cb);
 
@@ -86,7 +104,7 @@ class mc_axi_driver extends uvm_driver #(mc_axi_seq_item);
         intf.mc_driver_cb.zmc_top_mem_init <= 0;
 
         // Step 5: Wait for MEM_init_ACK to be deasserted
-        if(intf.mc_monitor_cb.zmc_top_rstn && !intf.mc_monitor_cb.zmc_top_sw_rst)
+        //if(intf.mc_monitor_cb.zmc_top_rstn && !intf.mc_monitor_cb.zmc_top_sw_rst)
             while(intf.mc_driver_cb.MEM_init_ACK)
                 @(intf.mc_driver_cb);
     
@@ -198,11 +216,7 @@ class mc_axi_driver extends uvm_driver #(mc_axi_seq_item);
         intf.mc_driver_cb.arburst           <= 0;
         intf.mc_driver_cb.arvalid           <= 0;
         intf.mc_driver_cb.rready            <= 0;
-        
-        @(intf.mc_driver_cb);
-        intf.mc_driver_cb.zmc_top_rstn      <= 1;
-        intf.mc_driver_cb.zmc_top_sw_rst    <= 0;
-
+     
         $display("finished initialization");
     endtask
 endclass

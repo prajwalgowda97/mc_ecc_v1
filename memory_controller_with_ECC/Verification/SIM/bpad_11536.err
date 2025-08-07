@@ -1,0 +1,166 @@
+Operating system: Linux
+                  0.0.0 Linux 3.10.0-1160.118.1.el7.x86_64 #1 SMP Wed Apr 24 16:01:50 UTC 2024 x86_64
+CPU: amd64
+     family 6 model 63 stepping 2
+     1 CPU
+
+GPU: UNKNOWN
+
+Crash reason:  DUMP_REQUESTED
+Crash address: 0x7ff39da0fb4a
+Process uptime: not available
+
+Thread 0 (crashed)
+ 0  libcbreakpad.so + 0x30b4a
+    rax = 0x00007ff39eec51e8   rdx = 0x0000000000000000
+    rcx = 0x00007ff39da0e3ad   rbx = 0x00007ff39eec5620
+    rsi = 0x0000000000000001   rdi = 0x00007ff39eec4fd8
+    rbp = 0x00007ff39eec5590   rsp = 0x00007ff39eec4f40
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000009   r11 = 0x00007ff39ecd909f
+    r12 = 0x00007ff39eec5908   r13 = 0x0000000000000000
+    r14 = 0x00007ff39eec55a0   r15 = 0x00007ff38fdb42a9
+    rip = 0x00007ff39da0fb4a
+    Found by: given as instruction pointer in context
+ 1  libcbreakpad.so + 0x2ee7e
+    rbp = 0x00007ff39eec56c0   rsp = 0x00007ff39eec55a0
+    rip = 0x00007ff39da0de7e
+    Found by: previous frame's frame pointer
+ 2  xmsim + 0x1393e5c
+    rsp = 0x00007ff39eec56d0   rip = 0x0000000001793e5c
+    Found by: stack scanning
+ 3  libc-2.17.so + 0x2037b8
+    rsp = 0x00007ff39eec5700   rip = 0x00007ff39e00e7b8
+    Found by: stack scanning
+ 4  libc-2.17.so + 0x203700
+    rsp = 0x00007ff39eec5708   rip = 0x00007ff39e00e700
+    Found by: stack scanning
+ 5  libc-2.17.so + 0x2037b8
+    rsp = 0x00007ff39eec5728   rip = 0x00007ff39e00e7b8
+    Found by: stack scanning
+ 6  libc-2.17.so + 0x8295a
+    rsp = 0x00007ff39eec5730   rip = 0x00007ff39dcc995a
+    Found by: stack scanning
+ 7  libc-2.17.so + 0x203760
+    rsp = 0x00007ff39eec57e0   rip = 0x00007ff39e00e760
+    Found by: stack scanning
+ 8  libc-2.17.so + 0x8638a
+    rsp = 0x00007ff39eec5810   rip = 0x00007ff39dccd38a
+    Found by: stack scanning
+ 9  xmsim + 0x137b49c
+    rsp = 0x00007ff39eec5840   rip = 0x000000000177b49c
+    Found by: stack scanning
+10  xmsim + 0x137caa1
+    rsp = 0x00007ff39eec5870   rip = 0x000000000177caa1
+    Found by: stack scanning
+11  xmsim + 0x1354e53
+    rsp = 0x00007ff39eec58b0   rip = 0x0000000001754e53
+    Found by: stack scanning
+12  libc-2.17.so + 0x392d2
+    rsp = 0x00007ff39eec58c0   rip = 0x00007ff39dc802d2
+    Found by: stack scanning
+13  xmsim + 0x1395565
+    rsp = 0x00007ff39eec5900   rip = 0x0000000001795565
+    Found by: stack scanning
+14  xmsim + 0x1d177f8
+    rsp = 0x00007ff39eec5930   rip = 0x00000000021177f8
+    Found by: stack scanning
+15  xmsim + 0x6d65aa
+    rsp = 0x00007ff39eec5990   rip = 0x0000000000ad65aa
+    Found by: stack scanning
+16  xmsim + 0x67adad
+    rsp = 0x00007ff39eec59b0   rip = 0x0000000000a7adad
+    Found by: stack scanning
+17  xmsim + 0x6d2b29
+    rsp = 0x00007ff39eec59d0   rip = 0x0000000000ad2b29
+    Found by: stack scanning
+18  xmsim + 0x6d8a5c
+    rsp = 0x00007ff39eec59e0   rip = 0x0000000000ad8a5c
+    Found by: stack scanning
+19  xmsim + 0xc621d9
+    rsp = 0x00007ff39eec5aa8   rip = 0x00000000010621d9
+    Found by: stack scanning
+20  libpthread-2.17.so + 0xf630
+    rsp = 0x00007ff39eec5ac0   rip = 0x00007ff39eac2630
+    Found by: stack scanning
+21  xmsim + 0xc621d9
+    rsp = 0x00007ff39eec5af8   rip = 0x00000000010621d9
+    Found by: stack scanning
+22  xmsim + 0xc621d9
+    rsp = 0x00007ff39eec5b20   rip = 0x00000000010621d9
+    Found by: stack scanning
+23  libtbbshm.so + 0x2006e0
+    rsp = 0x00007ff39eec5b60   rip = 0x00007ff38ffbb6e0
+    Found by: stack scanning
+24  libtbbshm.so + 0x142a9
+    rsp = 0x00007ff39eec5b70   rip = 0x00007ff38fdb42a9
+    Found by: stack scanning
+
+Loaded modules:
+0x00400000 - 0x02952fff  xmsim  ???  (main)  (WARNING: No symbols, xmsim, F696AF4D80496F307F45D30AD1A4C7FF0)
+0x02b52000 - 0x02d4afff  xmsim  ???
+0x7ff38f8f5000 - 0x7ff38f922fff  libtbbmalloc.so.2  ???
+0x7ff38f923000 - 0x7ff38fb25fff  libtbbmalloc.so.2  ???
+0x7ff38fb49000 - 0x7ff38fb99fff  libtbb.so.2  ???
+0x7ff38fb9a000 - 0x7ff38fd9dfff  libtbb.so.2  ???
+0x7ff38fda0000 - 0x7ff38fdbafff  libtbbshm.so  ???  (WARNING: No symbols, libtbbshm.so, ED7C7EB8B4345CA14CE346C488741E500)
+0x7ff38fdbb000 - 0x7ff38ffbbfff  libtbbshm.so  ???  (WARNING: No symbols, libtbbshm.so, 000000000000000000000000000000000)
+0x7ff39033d000 - 0x7ff39043cfff  wave.dsn  ???
+0x7ff39200c000 - 0x7ff39200efff  libuvmdpi.so  ???
+0x7ff39200f000 - 0x7ff39220ffff  libuvmdpi.so  ???
+0x7ff392210000 - 0x7ff392211fff  _sv_export.so  ???
+0x7ff392212000 - 0x7ff392412fff  _sv_export.so  ???
+0x7ff392413000 - 0x7ff392428fff  libsdi-verilog-nld.so  ???
+0x7ff392429000 - 0x7ff392629fff  libsdi-verilog-nld.so  ???
+0x7ff39262a000 - 0x7ff392632fff  libuvmpli.so  ???
+0x7ff392633000 - 0x7ff392833fff  libuvmpli.so  ???
+0x7ff392835000 - 0x7ff392851fff  libsdi2-sst2-nld.so  ???
+0x7ff392852000 - 0x7ff392a52fff  libsdi2-sst2-nld.so  ???
+0x7ff392a53000 - 0x7ff392ac7fff  libdwapi.so  ???
+0x7ff392ac8000 - 0x7ff392ccafff  libdwapi.so  ???
+0x7ff392d4f000 - 0x7ff392d63fff  libz.so.1.2.7  ???
+0x7ff392d64000 - 0x7ff392f64fff  libz.so.1.2.7  ???
+0x7ff392f65000 - 0x7ff392f6bfff  librt-2.17.so  ???
+0x7ff392f6c000 - 0x7ff39316cfff  librt-2.17.so  ???
+0x7ff39318a000 - 0x7ff393fe4fff  librnc.so  ???
+0x7ff393fe5000 - 0x7ff394282fff  librnc.so  ???
+0x7ff395bd2000 - 0x7ff395bf2fff  libml_uvm.so  ???
+0x7ff395bf3000 - 0x7ff395df3fff  libml_uvm.so  ???
+0x7ff3965f8000 - 0x7ff396764fff  libStrapNC.so  ???
+0x7ff396765000 - 0x7ff39699afff  libStrapNC.so  ???
+0x7ff3969a9000 - 0x7ff396a4afff  libdcapi.so  ???
+0x7ff396a4b000 - 0x7ff396c56fff  libdcapi.so  ???
+0x7ff396c58000 - 0x7ff396c5efff  libnss_db-2.17.so  ???
+0x7ff396c5f000 - 0x7ff396e5ffff  libnss_db-2.17.so  ???
+0x7ff396e63000 - 0x7ff396e79fff  libnsl-2.17.so  ???
+0x7ff396e7a000 - 0x7ff39707afff  libnsl-2.17.so  ???
+0x7ff39707d000 - 0x7ff397087fff  libnss_nis-2.17.so  ???
+0x7ff397088000 - 0x7ff397288fff  libnss_nis-2.17.so  ???
+0x7ff397289000 - 0x7ff397294fff  libnss_files-2.17.so  ???
+0x7ff397295000 - 0x7ff397495fff  libnss_files-2.17.so  ???
+0x7ff39749c000 - 0x7ff39d9defff  locale-archive  ???
+0x7ff39d9df000 - 0x7ff39da3bfff  libcbreakpad.so  ???  (WARNING: No symbols, libcbreakpad.so, 764711AE9936061EF464CE9153E26D5C0)
+0x7ff39da3c000 - 0x7ff39dc3ffff  libcbreakpad.so  ???
+0x7ff39dc47000 - 0x7ff39de0afff  libc-2.17.so  ???  (WARNING: No symbols, libc-2.17.so, 79E270948F389C7FB2ED3B2872D0C2090)
+0x7ff39de0b000 - 0x7ff39e00ffff  libc-2.17.so  ???  (WARNING: No symbols, libc-2.17.so, 000000000000000000000000000000000)
+0x7ff39e015000 - 0x7ff39e02afff  libgcc_s.so.1  ???
+0x7ff39e02b000 - 0x7ff39e22bfff  libgcc_s.so.1  ???
+0x7ff39e22c000 - 0x7ff39e39dfff  libstdc++.so.6.0.22  ???
+0x7ff39e39e000 - 0x7ff39e5a8fff  libstdc++.so.6.0.22  ???
+0x7ff39e5ad000 - 0x7ff39e6adfff  libm-2.17.so  ???
+0x7ff39e6ae000 - 0x7ff39e8aefff  libm-2.17.so  ???
+0x7ff39e8af000 - 0x7ff39e8b0fff  libdl-2.17.so  ???
+0x7ff39e8b1000 - 0x7ff39eab2fff  libdl-2.17.so  ???
+0x7ff39eab3000 - 0x7ff39eac9fff  libpthread-2.17.so  ???  (WARNING: No symbols, libpthread-2.17.so, F2C80CE132B93DFCAEDA22F8DAC5EBB90)
+0x7ff39eaca000 - 0x7ff39eccafff  libpthread-2.17.so  ???
+0x7ff39eccf000 - 0x7ff39ecf0fff  ld-2.17.so  ???
+0x7ff39eef0000 - 0x7ff39eef1fff  ld-2.17.so  ???
+0x7ffc7d3da000 - 0x7ffc7d3dbfff  linux-gate.so  ???
+
+******BACKTRACE*****
+vserror [0x1793e5c]
+serror [0x1795565]
+sv_seghandler [0xad8a5c]
+sslu_shm_dump_value [0xd1720d]
+ssl_eottracelist_handler [0xd9d349]
+******BACKTRACE END*****

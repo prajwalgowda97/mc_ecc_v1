@@ -86,3 +86,5 @@ define VIEW_MAP ( $VIEW_MAP \
 , .svms => svms \
 , .SVMS => SVMS \
 )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.rggen_apb_bridge:v
