@@ -1,5 +1,5 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Aug 07, 2025 at 12:09:44 IST
+TOOL:	xrun(64)	20.09-s009: Started on Aug 07, 2025 at 12:15:44 IST
 xrun
 	-access +rwc
 	-f compile_list.f
@@ -39,9 +39,9 @@ xrun
 		./../UVME/top/mc_apb_interface.sv
 	-uvmhome CDNS-1.1d
 	+UVM_TESTNAME=mc_ecc_enable_test
-Recompiling... reason: file '../UVME/tests/mc_ecc_enable_test.sv' is newer than expected.
-	expected: Thu Aug  7 12:08:42 2025
-	actual:   Thu Aug  7 12:09:42 2025
+Recompiling... reason: file '../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv' is newer than expected.
+	expected: Thu Aug  7 12:03:15 2025
+	actual:   Thu Aug  7 12:15:11 2025
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
 file: ./../UVME/uvm_pkg/mc_uvm_pkg.sv
 package mc_uvm_pkg;
@@ -265,7 +265,10 @@ Started drive_read
 Finished drive_read
 Finished Driving
 UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(37) @ 155: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Reset scenario 1 competed
-UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(43) @ 155: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 2 Started
+UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(28) @ 155: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] Scenario 3: Configuring ECC to enable mode
+UVM_INFO ./../UVME/agents/apb_agent/mc_apb_driver.sv(51) @ 175: uvm_test_top.env.mc_apb_agent.apb_drv [DRV] Mode : Write WDATA : 00000001 ADDR : 8
+UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(44) @ 195: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] ECC Status Register Value: 0x00000000
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(43) @ 195: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 2 Started
 Started Driving
 Started Drive Mem initial
 wr_rd Entered
@@ -273,11 +276,8 @@ Started drive_write
 Finished Drive Mem Initial
 Finished drive write
 Finished Driving
-UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(64) @ 164095: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 2 competed
-UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(28) @ 164095: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] Scenario 3: Configuring ECC to enable mode
-UVM_INFO ./../UVME/agents/apb_agent/mc_apb_driver.sv(51) @ 164115: uvm_test_top.env.mc_apb_agent.apb_drv [DRV] Mode : Write WDATA : 00000001 ADDR : 8
-UVM_INFO ./../UVME/sequences/ral_sequence/mc_ral_ecc_enable_sequence.sv(44) @ 164135: uvm_test_top.env.mc_apb_agent.apb_seqr@@ral_ecc_enable_seq [RAL_SEQ] ECC Status Register Value: 0x00000000
-UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(70) @ 164135: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Read scenario 3 Started
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(64) @ 164125: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Write scenario 2 competed
+UVM_INFO ./../UVME/sequences/axi_sequence/mc_ecc_enable_sequence.sv(70) @ 164125: uvm_test_top.env.mc_axi_agent.axi_seqr@@ecc_enable_seq [mc_ecc_enable_sequence] Read scenario 3 Started
 Started Driving
 wr_rd Entered
 Started drive_read
@@ -325,4 +325,4 @@ UVM_FATAL :    0
 Simulation complete via $finish(1) at time 464185 NS + 45
 /tools/cadence_march2021/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s009: Exiting on Aug 07, 2025 at 12:09:49 IST  (total: 00:00:05)
+TOOL:	xrun(64)	20.09-s009: Exiting on Aug 07, 2025 at 12:15:49 IST  (total: 00:00:05)
